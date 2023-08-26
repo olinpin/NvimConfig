@@ -1,0 +1,7 @@
+# Info
+On the master branch is my current nvim configuration. On v2.0 is the nvchad configuration that I used to use before.
+
+## Todo:
+- [ ] When scrolling too much right, and then coming back, the screen doesn't come back as quickly
+- [ ] LSP doesn't add closing bracket when typing opening bracket
+- [ ] Add null-ls for formatting

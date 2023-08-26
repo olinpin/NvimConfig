@@ -10,7 +10,6 @@ vim.o.sidescrolloff = 30
 vim.wo.relativenumber = true
 -- turn off line wrap
 vim.wo.wrap = false
+-- make commands case insensitive
+vim.o.ignorecase = true
 
-
-
--- ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
