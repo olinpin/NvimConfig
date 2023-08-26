@@ -8,3 +8,5 @@ On the master branch is my current nvim configuration. On v2.0 is the nvchad con
 - [ ] Choose a theme
 - [ ] Change the color of the autocomplete
 - [x] Make comments work
+- [ ] Delete tab when navigating out if it's not saved in harpoon
+- [x] Add git to signcolumn
