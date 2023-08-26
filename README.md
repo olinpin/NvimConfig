@@ -7,3 +7,4 @@ On the master branch is my current nvim configuration. On v2.0 is the nvchad con
 - [ ] Add null-ls for formatting
 - [ ] Choose a theme
 - [ ] Change the color of the autocomplete
+- [x] Make comments work
