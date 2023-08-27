@@ -1,6 +1,18 @@
 return {
     "lewis6991/gitsigns.nvim",
-    setup = function ()
-        require('gitsigns').setup()
+    opts = function()
+        return {
+            signs = {
+                add = { text = "│" },
+                change = { text = "│" },
+                delete = { text = "󰍵" },
+                topdelete = { text = "‾" },
+                changedelete = { text = "~" },
+                untracked = { text = "│" },
+            }
+        }
+    end,
+    config = function()
+        require("gitsigns").setup()
     end
 }

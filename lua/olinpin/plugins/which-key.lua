@@ -5,7 +5,7 @@ return {
         -- vim.o.timeout = true
         vim.o.timeoutlen = 500
     end,
-    config = function() 
+    config = function()
         local wk = require("which-key")
         wk.register({
             f = {
@@ -18,6 +18,8 @@ return {
                 name = "Git",
                 s = { "Open Git status" },
             },
+
+            -- harpoon
             ["1"] = { "Open harpoon buffer 1" },
             ["2"] = { "Open harpoon buffer 2" },
             ["3"] = { "Open harpoon buffer 3" },
@@ -27,9 +29,11 @@ return {
             ["7"] = { "Open harpoon buffer 7" },
             ["8"] = { "Open harpoon buffer 8" },
             ["9"] = { "Open harpoon buffer 9" },
+            h = { "Open Harpoon quick menu" },
             x = { "Close and remove buffer from harpoon" },
-            w = { "Replace all current words" },
             a = { "Add file to harpoon" },
+
+            w = { "Replace all current words" },
             u = { "Toggle Undotree" },
         },
         {

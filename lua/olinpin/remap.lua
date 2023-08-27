@@ -10,7 +10,6 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 
 -- window split remaps
 
-
 -- move selected lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -26,3 +25,17 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 
 -- replace the word you're on everywhere in buffer
 vim.keymap.set("n", "<leader>w", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
+
+
+-- move within insert mode
+-- go to  beginning and end
+vim.keymap.set("i", "<C-b>", "<ESC>^i") -- "Beginning of line"
+vim.keymap.set("i", "<C-e>", "<End>") -- "End of line"
+
+-- navigate within insert mode
+vim.keymap.set("i", "<C-h>", "<Left>") -- "Move left"
+vim.keymap.set("i", "<C-l>", "<Right>") -- "Move right"
+vim.keymap.set("i", "<C-j>", "<Down>") -- "Move down"
+vim.keymap.set("i", "<C-k>", "<Up>") -- "Move up"
+
+vim.keymap.set("x", "Y", "\"*y") -- copy to clipboard
