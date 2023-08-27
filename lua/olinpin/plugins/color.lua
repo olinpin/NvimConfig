@@ -1,25 +1,16 @@
--- return {
---   "folke/tokyonight.nvim",
---   lazy = false,
---   priority = 1000,
---   opts = {},
---   config = function ()
---       require("tokyonight").setup({
---           style = "moon"
---       })
---       vim.cmd('colorscheme tokyonight')
---       require('lualine').setup {
---           options = {
---               -- ... your lualine config
---               theme = 'tokyonight'
---               -- ... your lualine config
---           }
---       }
---   end
--- }
+function ColorMe(color)
+    color = color or "catppuccin"
+    vim.cmd.colorscheme(color)
+
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+end
+
 return {
-    "EdenEast/nightfox.nvim",
-    config = function ()
-        vim.cmd("colorscheme nightfox")
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+    init = function()
+        ColorMe()
     end
 }
