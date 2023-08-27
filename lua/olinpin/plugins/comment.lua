@@ -1,5 +1,5 @@
 return {
-    "numToSr/Comment.nvim",
+    "numToStr/Comment.nvim",
     lazy = false,
 
     config = function ()
