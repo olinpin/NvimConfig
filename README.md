@@ -12,3 +12,4 @@ On the master branch is my current nvim configuration. On v2.0 is the nvchad con
 - [x] Add git to signcolumn
 - [ ] https://github.com/ms-jpq/coq_nvim
 - [x] gitsigns not working
+- [ ] Noice has too big window, set max width
