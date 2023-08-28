@@ -38,3 +38,5 @@ vim.keymap.set("i", "<C-j>", "<Down>", { desc = "Move down" })
 vim.keymap.set("i", "<C-k>", "<Up>", { desc = "Move up" })
 
 vim.keymap.set("x", "Y", "\"*y") -- copy to clipboard
+
+vim.keymap.set("n", "<ESC>", "<ESC>:noh<CR>", { desc = "Clear highlights" })
