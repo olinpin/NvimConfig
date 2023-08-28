@@ -19,7 +19,9 @@ return {
 				"go",
                 "markdown",
                 "markdown_inline",
-                "regex"
+                "regex",
+                "swift",
+                "php"
 			},
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)
