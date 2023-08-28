@@ -12,5 +12,6 @@ return {
     priority = 1000,
     init = function()
         ColorMe()
+        vim.o.background = "dark"
     end
 }
