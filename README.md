@@ -10,3 +10,4 @@ On the master branch is my current nvim configuration. On v2.0 is the nvchad con
 - [ ] Delete tab when navigating out if it's not saved in harpoon
 - [x] Add git to signcolumn
 - [x] gitsigns not working
+- [ ] change ctrl L to ctrl ; for copilot, because clashing with ctrl l for moving in insert mode
