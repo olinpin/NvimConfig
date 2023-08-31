@@ -18,32 +18,28 @@ return {
 
         vim.keymap.set("n", "<leader>a", mark.add_file)
         vim.keymap.set("n", "<leader>x", function()
-            -- local currentIndex = mark.get_index_of(vim.fn.expand('%'))
+            -- remove current file
             mark.rm_file(vim.fn.expand('%'))
-            --
-            -- STARTS HERE FROM CHATGPT
-            --
-            -- local config = harpoon.get_mark_config()
-            -- local new_marks = {}
 
-            -- for idx = 1, mark.get_length() do
-            --     local filename = mark.get_marked_file_name(idx)
-            --     if filename ~= "" then
-            --         local bufnr = vim.fn.bufnr(filename)
-            --         if bufnr ~= -1 then
-            --             local row, col = vim.fn.getpos("'[")[2], vim.fn.getpos("'[")[3]
-            --             table.insert(new_marks, {
-            --                 filename = filename,
-            --                 row = row,
-            --                 col = col,
-            --             })
-            --         end
-            --     end
-            -- end
+            local new_marks = {}
+            local config = harpoon.get_mark_config()
+
+            -- loop over the current marks
+            for idx = 1, mark.get_length() do
+                local filename = config.marks[idx].filename
+                -- if the mark is not empty, add it to the new marks table (removes the '(empty)' file)
+                if filename ~= "" then
+                    table.insert(new_marks, {
+                        filename = filename,
+                        row = config.marks[idx].row,
+                        col = config.marks[idx].col,
+                    })
+                end
+            end
+            config.marks = new_marks
+
             ui.nav_prev()
 
-
-            -- config.marks = new_marks-- vim.cmd("bd")
         end)
         vim.keymap.set("n", "<leader>h", ui.toggle_quick_menu)
 
