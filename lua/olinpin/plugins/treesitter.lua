@@ -40,7 +40,11 @@ return {
 				-- Instead of true it can also be a list of languages
 				additional_vim_regex_highlighting = {"markdown"}
 			},
-		}
-	end
+        }
+        require'lspconfig'.sourcekit.setup{
+            cmd = {'/usr/bin/sourcekit-lsp'}
+        }
+        vim.keymap.set('n','gd',vim.lsp.buf.definition)
+    end
 
 }
