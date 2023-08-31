@@ -14,11 +14,36 @@ return {
         })
         local mark = require("harpoon.mark")
         local ui = require("harpoon.ui")
+        local harpoon = require("harpoon")
 
         vim.keymap.set("n", "<leader>a", mark.add_file)
         vim.keymap.set("n", "<leader>x", function()
-            mark.rm_file()
-            vim.cmd("bd")
+            -- local currentIndex = mark.get_index_of(vim.fn.expand('%'))
+            mark.rm_file(vim.fn.expand('%'))
+            --
+            -- STARTS HERE FROM CHATGPT
+            --
+            -- local config = harpoon.get_mark_config()
+            -- local new_marks = {}
+
+            -- for idx = 1, mark.get_length() do
+            --     local filename = mark.get_marked_file_name(idx)
+            --     if filename ~= "" then
+            --         local bufnr = vim.fn.bufnr(filename)
+            --         if bufnr ~= -1 then
+            --             local row, col = vim.fn.getpos("'[")[2], vim.fn.getpos("'[")[3]
+            --             table.insert(new_marks, {
+            --                 filename = filename,
+            --                 row = row,
+            --                 col = col,
+            --             })
+            --         end
+            --     end
+            -- end
+            ui.nav_prev()
+
+
+            -- config.marks = new_marks-- vim.cmd("bd")
         end)
         vim.keymap.set("n", "<leader>h", ui.toggle_quick_menu)
 
