@@ -1,18 +1,18 @@
-vim.keymap.set("n", "<C-n>", vim.cmd.Ex)
+vim.keymap.set("n", "<C-n>", vim.cmd.Ex, { desc = "Open explorer" })
 vim.keymap.set("n", ";", ":")
 
 
 -- window nav remaps
-vim.keymap.set("n", "<C-h>", "<C-w>h")
-vim.keymap.set("n", "<C-j>", "<C-w>j")
-vim.keymap.set("n", "<C-k>", "<C-w>k")
-vim.keymap.set("n", "<C-l>", "<C-w>l")
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move window left" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move window down" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move window up" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move window right" })
 
 -- window split remaps
 
 -- move selected lines
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selected down" })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected up" })
 
 -- keep cursor in middle when searching
 vim.keymap.set("n", "n", "nzzzv")
@@ -20,10 +20,10 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 
 -- keep copied text when pasting over selected text
-vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("x", "<leader>p", "\"_dP", { desc = "Paste over selected text" })
 
 -- replace the word you're on everywhere in buffer
-vim.keymap.set("n", "<leader>w", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
+vim.keymap.set("n", "<leader>w", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { desc = "Replace word" })
 
 
 -- move within insert mode
@@ -37,6 +37,10 @@ vim.keymap.set("i", "<C-l>", "<Right>", { desc = "Move right" })
 vim.keymap.set("i", "<C-j>", "<Down>", { desc = "Move down" })
 vim.keymap.set("i", "<C-k>", "<Up>", { desc = "Move up" })
 
-vim.keymap.set("x", "Y", "\"*y") -- copy to clipboard
+vim.keymap.set("x", "Y", "\"*y", { desc = "Copy to clipboard" }) -- copy to clipboard
 
 vim.keymap.set("n", "<ESC>", "<ESC>:noh<CR>", { desc = "Clear highlights" })
+
+-- copy file path
+vim.keymap.set("n", "<leader>cfp", [[:let @+ = expand("%:p")<CR>]], { desc = "Copy file path" })
+

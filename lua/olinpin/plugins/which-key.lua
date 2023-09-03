@@ -20,15 +20,15 @@ return {
             },
 
             -- harpoon
-            ["1"] = { "Open harpoon buffer 1" },
-            ["2"] = { "Open harpoon buffer 2" },
-            ["3"] = { "Open harpoon buffer 3" },
-            ["4"] = { "Open harpoon buffer 4" },
-            ["5"] = { "Open harpoon buffer 5" },
-            ["6"] = { "Open harpoon buffer 6" },
-            ["7"] = { "Open harpoon buffer 7" },
-            ["8"] = { "Open harpoon buffer 8" },
-            ["9"] = { "Open harpoon buffer 9" },
+            ["1"] = { "Openf harpoon buffer 1" },
+            ["2"] = "which_key_ignore",
+            ["3"] = "which_key_ignore",
+            ["4"] = "which_key_ignore",
+            ["5"] = "which_key_ignore",
+            ["6"] = "which_key_ignore",
+            ["7"] = "which_key_ignore",
+            ["8"] = "which_key_ignore",
+            ["9"] = "which_key_ignore",
             h = { "Open Harpoon quick menu" },
             x = { "Close and remove buffer from harpoon" },
             a = { "Add file to harpoon" },
@@ -40,5 +40,7 @@ return {
             prefix = "<leader>"
         }
         )
+        -- remove mapping for <leader>2 in which key
+        -- wk.which_key_map["2"] = nil
     end
 }
