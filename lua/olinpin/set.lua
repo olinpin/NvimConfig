@@ -3,19 +3,18 @@ vim.o.scrolloff = 800
 -- keep cursor on the left
 vim.o.sidescrolloff = 30
 -- set relative line numbering
-vim.wo.number = true
+vim.opt.nu = true
 vim.wo.relativenumber = true
 -- turn off line wrap
 vim.wo.wrap = false
 -- make commands case insensitive
 vim.o.ignorecase = true
 
--- make 4 space indents
+-- indenting
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
-
 vim.opt.smartindent = true
 
 
