@@ -1,6 +1,3 @@
 return {
-    "theprimeagen/vim-be-good",
-    config = function()
-        require("vim-be-good").setup()
-    end
+    "theprimeagen/vim-be-good"
 }
