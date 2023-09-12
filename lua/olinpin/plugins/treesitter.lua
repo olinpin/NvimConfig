@@ -21,7 +21,8 @@ return {
                 "markdown_inline",
                 "regex",
                 "swift",
-                "php"
+                "php",
+                "kotlin"
 			},
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)
