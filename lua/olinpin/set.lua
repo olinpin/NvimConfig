@@ -35,3 +35,10 @@ vim.g.mapleader = " "
 vim.opt.signcolumn = "yes"
 
 vim.opt.termguicolors = true
+
+vim.opt.fillchars = { fold = " " }
+vim.opt.foldmethod = "indent"
+vim.opt.foldenable = false
+vim.opt.foldlevel = 99
+-- g.markdown_folding = 1 -- enable markdown folding
+

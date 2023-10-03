@@ -44,3 +44,5 @@ vim.keymap.set("n", "<ESC>", "<ESC>:noh<CR>", { desc = "Clear highlights" })
 -- copy file path
 vim.keymap.set("n", "<leader>cfp", [[:let @+ = expand("%:p")<CR>]], { desc = "Copy file path" })
 
+vim.keymap.set("n", "ff", "za", { desc = "Fold" })
+
