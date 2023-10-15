@@ -22,7 +22,8 @@ return {
                 "regex",
                 "swift",
                 "php",
-                "kotlin"
+                "kotlin",
+                "rust"
 			},
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)
