@@ -46,7 +46,7 @@ return {
         require'lspconfig'.sourcekit.setup{
             cmd = {'/usr/bin/sourcekit-lsp'}
         }
-        vim.keymap.set('n','gd',vim.lsp.buf.definition)
+        -- vim.keymap.set('n','gd',vim.lsp.buf.definition)
     end
 
 }
