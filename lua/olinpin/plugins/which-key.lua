@@ -35,6 +35,10 @@ return {
 
             w = { "Replace all current words" },
             u = { "Toggle Undotree" },
+            d = {
+                d = { "duck hatch" },
+                k = { "duck cook" }
+            }
         },
         {
             prefix = "<leader>"
