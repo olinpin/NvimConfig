@@ -20,6 +20,7 @@ return {
                 "stylua",
                 "jq",
                 "php-cs-fixer",
+                "intelephense",
             }
         })
     end
