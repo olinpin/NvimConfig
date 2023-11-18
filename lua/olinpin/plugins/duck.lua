@@ -6,6 +6,6 @@ return {
         vim.keymap.set('n', '<leader>dc', function() duck.hatch("🐿️", 20) end, {})
         vim.keymap.set('n', '<leader>dk', function() duck.cook() end, {})
         vim.keymap.set('n', '<leader>dk', function() duck.cook("🐿️") end, {})
-        duck.hatch("🐿️", 20)
+        -- duck.hatch("🐿️", 20)
     end
 }
