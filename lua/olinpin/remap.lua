@@ -46,3 +46,12 @@ vim.keymap.set("n", "<leader>cfp", [[:let @+ = expand("%:p")<CR>]], { desc = "Co
 
 vim.keymap.set("n", "ff", "za", { desc = "Fold" })
 
+-- remap parentheses to add end parenthese
+vim.keymap.set("i", "(", "()<Left>")
+vim.keymap.set("i", "{", "{}<Left>")
+vim.keymap.set("i", "[", "[]<Left>")
+
+-- remap to add end quotes
+vim.keymap.set("i", "'", "''<Left>")
+vim.keymap.set("i", "\"", "\"\"<Left>")
+vim.keymap.set("i", "`", "``<Left>")
