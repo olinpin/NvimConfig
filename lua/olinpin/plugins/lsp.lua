@@ -23,7 +23,19 @@ return {
             lsp.default_keymaps({buffer = bufnr})
         end)
 
-        lsp.setup_servers({'tsserver', 'eslint'})
+        lsp.setup_servers({'tsserver', 'eslint', 'html'})
+
+        -- require("lspconfig").html.setup({
+        --     filetypes = { "html", "htmldjango" },
+        --     init_options = {
+        --         configurationSection = { "html", "css", "javascript" },
+        --         embeddedLanguages = {
+        --             css = true,
+        --             javascript = true,
+        --         },
+        --         provideFormatter = true,
+        --     },
+        -- })
 
         require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
         lsp.set_sign_icons({
