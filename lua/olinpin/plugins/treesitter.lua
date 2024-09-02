@@ -23,7 +23,8 @@ return {
                 "swift",
                 "php",
                 "kotlin",
-                "rust"
+                "rust",
+                "haskell",
 			},
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)
@@ -46,6 +47,10 @@ return {
         require'lspconfig'.sourcekit.setup{
             cmd = {'/usr/bin/sourcekit-lsp'}
         }
+        require('lspconfig')['hls'].setup{
+            filetypes = { 'haskell', 'lhaskell', 'cabal' },
+        }
+
         -- vim.keymap.set('n','gd',vim.lsp.buf.definition)
     end
 

@@ -23,7 +23,7 @@ return {
             lsp.default_keymaps({buffer = bufnr})
         end)
 
-        lsp.setup_servers({'tsserver', 'eslint'})
+        lsp.setup_servers({'tsserver', 'eslint', 'hls'})
 
         require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
         lsp.set_sign_icons({
