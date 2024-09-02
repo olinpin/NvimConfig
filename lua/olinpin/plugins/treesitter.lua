@@ -25,6 +25,7 @@ return {
                 "kotlin",
                 "rust",
                 "haskell",
+                "html"
 			},
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)
