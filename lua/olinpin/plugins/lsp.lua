@@ -23,7 +23,7 @@ return {
             lsp.default_keymaps({buffer = bufnr})
         end)
 
-        lsp.setup_servers({'tsserver', 'eslint', 'html', 'hls'})
+        lsp.setup_servers({'ts_ls', 'eslint', 'html', 'hls', 'gopls'})
 
         -- require("lspconfig").html.setup({
         --     filetypes = { "html", "htmldjango" },
