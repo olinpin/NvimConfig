@@ -57,12 +57,12 @@ vim.keymap.set("n", "ff", "za", { desc = "Fold" })
 -- vim.keymap.set("i", "`", "``<Left>")
 
 -- remove mappings for avante
-vim.keymap.del("n", "<leader>aa")
-vim.keymap.del("v", "<leader>aa")
-vim.keymap.del("n", "<leader>ar")
-vim.keymap.del("v", "<leader>ae")
-vim.keymap.del("n", "<leader>ah")
-vim.keymap.del("n", "<leader>ad")
+-- vim.keymap.del("n", "<leader>aa")
+-- vim.keymap.del("v", "<leader>aa")
+-- vim.keymap.del("n", "<leader>ar")
+-- vim.keymap.del("v", "<leader>ae")
+-- vim.keymap.del("n", "<leader>ah")
+-- vim.keymap.del("n", "<leader>ad")
 
 -- remove mappings from which-key
 local wk = require("which-key")
