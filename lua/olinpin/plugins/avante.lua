@@ -10,6 +10,7 @@ return {
 			-- max_tokens = 4096,
 		},
 	},
+	build = "make",
 	keys = {
 		{
 			"<leader>ca",
@@ -60,6 +61,7 @@ return {
 		{
 			-- Make sure to setup it properly if you have lazy=true
 			"MeanderingProgrammer/render-markdown.nvim",
+			-- "zbirenbaum/copilot.lua", -- for providers='copilot'
 			opts = {
 				file_types = { "markdown", "Avante" },
 			},
