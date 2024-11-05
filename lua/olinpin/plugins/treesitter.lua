@@ -24,6 +24,7 @@ return {
                 "php",
                 "kotlin",
                 "rust",
+                "haskell",
                 "html"
 			},
 
@@ -47,6 +48,10 @@ return {
         require'lspconfig'.sourcekit.setup{
             cmd = {'/usr/bin/sourcekit-lsp'}
         }
+        require('lspconfig')['hls'].setup{
+            filetypes = { 'haskell', 'lhaskell', 'cabal' },
+        }
+
         -- vim.keymap.set('n','gd',vim.lsp.buf.definition)
     end
 
