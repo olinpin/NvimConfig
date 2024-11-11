@@ -73,3 +73,8 @@ vim.keymap.set("n", "ff", "za", { desc = "Fold" })
 --     { "<leader>ah", hidden = true },
 --     { "<leader>ar", hidden = true },
 -- })
+
+
+
+vim.api.nvim_set_keymap("n", "<leader>ys", "<Plug>Ysurround", {})
+
