@@ -22,7 +22,7 @@ return {
 			{ "<leader>dk", desc = "duck cook" },
 			{ "<leader>f", group = "Find" },
 			{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
-			{ "<leader>fg", "<cmd>Telescope git_files<cr>", desc = "Find Git Files" },
+			{ "<leader>fg", "<cmd>Telescope git_branches<cr>", desc = "Find Git branches" },
 			{ "<leader>fw", "<cmd>Telescope live_grep<cr>", desc = "Find Words" },
 			{ "<leader>g", group = "Git" },
 			{ "<leader>gs", desc = "Open Git status" },
