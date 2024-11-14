@@ -23,6 +23,7 @@ return {
 			{ "<leader>f", group = "Find" },
 			{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
 			{ "<leader>fg", "<cmd>Telescope git_branches<cr>", desc = "Find Git branches" },
+            { "<leader>fc", "<cmd>Telescope git_commits<cr>", desc = "Find Commits" },
 			{ "<leader>fw", "<cmd>Telescope live_grep<cr>", desc = "Find Words" },
 			{ "<leader>g", group = "Git" },
 			{ "<leader>gs", desc = "Open Git status" },
