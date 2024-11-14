@@ -29,6 +29,9 @@ return {
 		local telescope = require("telescope")
 
 		telescope.setup({
+            defaults = {
+                buffer_previewer_maker = new_maker,
+            },
             pickers = {
                 find_command = { "rg", "--files", "--hidden", "--no-ignore",
                     "--glob", "!**/.git/*", "--glob", "!**/venv/*", "--glob", "!**/.venv/*", "--glob",
