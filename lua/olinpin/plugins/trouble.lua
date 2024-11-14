@@ -9,12 +9,12 @@ return {
     event = "VeryLazy",
     keys = {
         {
-            "<leader>xx",
+            "<C-t>",
             "<cmd>Trouble diagnostics toggle<cr>",
             desc = "Diagnostics (Trouble)",
         },
         {
-            "<leader>xX",
+            "<C-T>",
             "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
             desc = "Buffer Diagnostics (Trouble)",
         },
