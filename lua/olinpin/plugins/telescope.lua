@@ -29,22 +29,34 @@ return {
 		local telescope = require("telescope")
 
 		telescope.setup({
-            defaults = {
-                buffer_previewer_maker = new_maker,
-            },
-            pickers = {
-                find_command = { "rg", "--files", "--hidden", "--no-ignore",
-                    "--glob", "!**/.git/*", "--glob", "!**/venv/*", "--glob", "!**/.venv/*", "--glob",
-                    "!**/node_modules/*",
-                    "--glob", "!**/vendor/*", "--glob", "!**/var/cache/*",
-                    "--glob", "!**/.next/*", "--glob", "!**/out/*", "--glob", "!**/dist/*", "--glob", "!**.min.js", "prompt_prefix=🔍",
+			defaults = {
+				buffer_previewer_maker = new_maker,
+			},
+			pickers = {
+                find_files = {
+                    -- `hidden = true` will still show the inside of `.git/` as it's not `.gitignore`d.
+                    find_command = { "rg", "--files", "--hidden", "--no-ignore",
+                        "--glob", "!**/.git/*", "--glob", "!**/venv/*", "--glob", "!**/.venv/*", "--glob",
+                        "!**/node_modules/*",
+                        "--glob", "!**/vendor/*", "--glob", "!**/var/cache/*",
+                        "--glob", "!**/.next/*", "--glob", "!**/out/*", "--glob", "!**/dist/*", "--glob", "!**.min.js"
+                    },
                 },
-            },
+			},
 			preview = {
 				filesize_limit = 0.5, -- MB
 			},
 		})
+        vim.keymap.set('n', '<leader>*', builtin.grep_string, {desc = "Grep current string"})
+        vim.keymap.set('n', '<leader>ff', builtin.find_files, {desc = "Find files"})
+        vim.keymap.set('n', '<leader>fg', builtin.git_branches, {desc = "Find Git branches" })
+        vim.keymap.set('n', '<leader>fc', builtin.git_commits, {desc = "Find Commits" })
+        vim.keymap.set('n', '<leader>fw', builtin.live_grep, {desc = "Find Words" })
+
 	end,
 
-    -- keymaps are specified in which-key...
+
+	config = function()
+		require("telescope")
+	end,
 }
