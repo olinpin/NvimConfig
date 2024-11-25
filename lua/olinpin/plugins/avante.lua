@@ -2,6 +2,22 @@ return {
 	"yetone/avante.nvim",
 	event = "VeryLazy",
 	lazy = false,
+	config = function(_, opts)
+		-- Let the plugin load first
+		require("avante").setup(opts)
+		-- Then remove the default mappings
+		vim.schedule(function()
+			vim.keymap.del({ "n", "v" }, "<leader>aa")
+			vim.keymap.del("n", "<leader>ar")
+			vim.keymap.del("v", "<leader>ae")
+			vim.keymap.del("n", "<leader>ah")
+			vim.keymap.del("n", "<leader>ad")
+			vim.keymap.del("n", "<leader>af")
+			vim.keymap.del("n", "<leader>aR")
+			vim.keymap.del("n", "<leader>as")
+			vim.keymap.del("n", "<leader>at")
+		end)
+	end,
 	opts = {
 		-- add any opts here
 		provider = "copilot",
