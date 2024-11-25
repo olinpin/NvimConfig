@@ -22,7 +22,7 @@ end
 return {
 	"nvim-telescope/telescope.nvim",
 	event = "VeryLazy",
-	tag = "0.1.2",
+	tag = "0.1.8",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	init = function()
 		local builtin = require("telescope.builtin")
@@ -53,10 +53,5 @@ return {
         vim.keymap.set('n', '<leader>fc', builtin.git_commits, {desc = "Find Commits" })
         vim.keymap.set('n', '<leader>fw', builtin.live_grep, {desc = "Find Words" })
 
-	end,
-
-
-	config = function()
-		require("telescope")
 	end,
 }
